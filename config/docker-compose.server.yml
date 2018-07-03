@@ -1,0 +1,26 @@
+version: "3"
+services:
+  phonebook-server-1:
+    build:
+      context: ../
+      dockerfile: Dockerfile.server
+    ports:
+      - "3001:3000"
+    networks:
+      app:
+        aliases:
+          - phonebook-server
+
+  phonebook-server-2:
+    build:
+      context: ../
+      dockerfile: Dockerfile.server
+    ports:
+      - "3002:3000"
+    networks:
+      app:
+        aliases:
+          - phonebook-server
+
+networks:
+  app:

@@ -1,0 +1,17 @@
+{
+  "name": "phonebook-service",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "dependencies": {
+    "@grpc/proto-loader": "0.1.0",
+    "grpc": "1.12.4"
+  },
+  "scripts": {
+    "start": "node main.js",
+    "server": "nodemon main.js"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  }
+}

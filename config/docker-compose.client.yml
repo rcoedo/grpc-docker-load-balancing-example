@@ -1,0 +1,11 @@
+version: "3"
+services:
+  phonebook-client:
+    build:
+        context: ../
+        dockerfile: Dockerfile.client
+    networks:
+      - app
+
+networks:
+  app:

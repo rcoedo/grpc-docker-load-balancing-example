@@ -1,0 +1,11 @@
+FROM node:10
+
+WORKDIR /usr/src/app
+
+COPY ./client/package.json ./
+
+RUN npm install
+
+COPY ./proto/phonebook.proto ./client ./
+
+CMD ["npm", "start", "./phonebook.proto"]
